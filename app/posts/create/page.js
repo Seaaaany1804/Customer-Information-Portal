@@ -22,7 +22,7 @@ const page = () => {
       <div className="flex flex-col justify-start bg-white">
         <h1 className="text-3xl font-normal p-4"> Create Customers </h1>
 
-        <form onSubmit={handleSubmit} className="flex gap-2">
+        <form onSubmit={handleSubmit} className="flex gap-4">
         <input
             type="text"
             placeholder="Title"
