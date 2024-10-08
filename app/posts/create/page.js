@@ -9,11 +9,12 @@ const page = () => {
     const [fName, setfName] = useState('')
     const [lName, setlName] = useState('')
     const [email, setEmail] = useState('')
+    const [phoneNum, setphoneNum] = useState('+63')
     const router = useRouter()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await axios.post('http://localhost:5000/posts', {fName, lName, email})
+        await axios.post('http://localhost:5000/posts', {fName, lName, email, phoneNum})
         router.push('/')
     }
 
@@ -21,7 +22,7 @@ const page = () => {
   return (
     <div className="bg-[#f8f4f4] h-screen flex items-center justify-center">
       <div className="flex flex-col justify-center items-center w-[50%] bg-white">
-        <h1 className="text-3xl font-normal p-4"> Create Customers </h1>
+        <h1 className="text-3xl font-normal text-start p-4"> Create Customers </h1>
 
         <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-4 w-[60%]">
           <div className="flex gap-4 w-[100%]">
@@ -59,10 +60,21 @@ const page = () => {
                   onChange={(e) => setEmail(e.target.value)}
               />
             </div>  
+
+            <div className="flex flex-col w-[100%]">
+              <label> Phone Number </label>
+              <input
+                  type="text"
+                  placeholder="ex. example@xyz.com"
+                  value={phoneNum}
+                  className="p-2 px-4 border border-gray-500"
+                  onChange={(e) => setphoneNum(e.target.value)}
+              />
+            </div>  
           
-          <div className="flex gap-4">
-           <button className="bg-blue-700 text-white rounded-md p-2 px-4"> CANCEL </button>
-            <button className="bg-blue-700 text-white rounded-md p-2 px-4 "> SUBMIT HERE! </button>
+          <div className="flex gap-4 w-[100%]">
+            <button className="bg-blue-700 text-white w-[100%] rounded-md p-2 px-4 "> SUBMIT HERE! </button>
+            <button className="bg-blue-700 text-white w-[100%] rounded-md p-2 px-4"> CANCEL </button>            
           </div>
           
         </form>
