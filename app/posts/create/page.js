@@ -6,13 +6,13 @@ import axios from "axios";
 
 const page = () => {
     
-    const [title, setTitle] = useState('')
-    const [content, setContent] = useState('')
+    const [fName, setfName] = useState('')
+    const [lName, setlName] = useState('')
     const router = useRouter()
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        await axios.post('http://localhost:5000/posts', {title, content})
+        await axios.post('http://localhost:5000/posts', {fName, lName})
         router.push('/')
     }
 
@@ -22,28 +22,28 @@ const page = () => {
       <div className="flex flex-col justify-center items-center w-[50%] bg-white">
         <h1 className="text-3xl font-normal p-4"> Create Customers </h1>
 
-        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-4 w-[50%]">
+        <form onSubmit={handleSubmit} className="flex flex-col items-center justify-center gap-4 w-[70%]">
           <div className="flex gap-4">
-            <div>
-              <label> Title </label>
+            <div className="flex flex-col">
+              <label> First Name </label>
 
               <input
                   type="text"
-                  placeholder="Title"
-                  value={title}
+                  placeholder="ex. Christian"
+                  value={fName}
                   className="p-2 px-4 border border-gray-500"
-                  onChange={(e) => setTitle(e.target.value)}
+                  onChange={(e) => setfName(e.target.value)}
               />
             </div>
             
-            <div>
-              <label> Content </label>
+            <div className="flex flex-col">
+              <label> Last Name </label>
               <input
                   type="text"
-                  placeholder="Content"
-                  value={content}
+                  placeholder="ex. Espinoza"
+                  value={lName}
                   className="p-2 px-4 border border-gray-500"
-                  onChange={(e) => setContent(e.target.value)}
+                  onChange={(e) => setlName(e.target.value)}
               />
             </div>  
           </div>
