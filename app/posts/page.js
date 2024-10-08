@@ -90,9 +90,9 @@ export default function Posts() {
                         <table className="divide-y divide-gray-500 w-full bg-white">
                             <thead>
                                 <tr className="text-xl">
-                                    <th className="text-start"> ID </th>
-                                    <th className="text-start"> Title </th>
-                                    <th className="text-start"> Content </th>
+                                    <th className="text-start"> Name </th>
+                                    <th className="text-start"> Email </th>
+                                    <th className="text-start"> Phone Number </th>
                                     <th className="text-end"> Action </th>
                                 </tr>
                             </thead>
@@ -101,9 +101,9 @@ export default function Posts() {
                                 {
                                     posts.map((post) => (
                                         <tr key={post.id} className="text-md">
-                                            <td className="text-start py-3">{post.id}</td>
-                                            <td className="text-start py-3">{post.title}</td>
-                                            <td className="text-start py-3">{post.content}</td>
+                                            <td className="text-start py-3">{post.fName} {post.lName}</td>
+                                            <td className="text-start py-3">{post.email}</td>
+                                            <td className="text-start py-3">{post.phoneNum}</td>
                                             <td className="flex gap-4 justify-end text-end py-3">
                                                 <button> <IoEyeOutline className="text-xl hover:text-2xl" /> </button>
                                                 <button> <FaRegEdit className="text-lg hover:text-xl" /> </button>

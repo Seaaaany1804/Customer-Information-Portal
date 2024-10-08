@@ -1,34 +1,22 @@
 {
   "posts": [
     {
-      "id": "74e2",
-      "title": "First Post",
-      "content": "This is my first post forever."
+      "fName": "Christian",
+      "lName": "Espinoza",
+      "email": "ch.esp@gmail.com",
+      "phoneNum": "+63945634176"
     },
     {
-      "id": "u2a6",
-      "title": "Second Post",
-      "content": "This is my second post forever."
+      "fName": "Christian",
+      "lName": "Espinoza",
+      "email": "ch.esp@gmail.com",
+      "phoneNum": "+63945634176"
     },
     {
-      "id": "23v7",
-      "title": "Third Post",
-      "content": "This is my third post forever."
-    },
-    {
-      "id": "5a3c",
-      "title": "Fourth Post",
-      "content": "This is my fourth post forever."
-    },
-    {
-      "id": "9k4x",
-      "title": "Fifth Post",
-      "content": "This is my fifth post forever."
-    },
-    {
-      "id": "1z3g",
-      "title": "Sixth Post",
-      "content": "This is my sixth post forever."
-    }   
+      "fName": "Christian",
+      "lName": "Espinoza",
+      "email": "ch.esp@gmail.com",
+      "phoneNum": "+63945634176"
+    }
   ]
 }
