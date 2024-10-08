@@ -105,7 +105,7 @@ export default function Posts() {
                                             <td className="text-start py-3">{post.email}</td>
                                             <td className="text-start py-3">{post.phoneNum}</td>
                                             <td className="flex gap-4 justify-end text-end py-3">
-                                                <button> <IoEyeOutline className="text-xl hover:text-2xl" /> </button>
+                                                <Link href={`/posts/${post.id}`}> <IoEyeOutline className="text-xl hover:text-2xl" /> </Link>
                                                 <button> <FaRegEdit className="text-lg hover:text-xl" /> </button>
                                                 <button> <MdDeleteOutline className="text-xl hover:text-2xl" /> </button>
                                             </td>
