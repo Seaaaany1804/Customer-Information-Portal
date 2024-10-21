@@ -9,6 +9,7 @@ import { FaRegEdit, FaFastBackward, FaFastForward } from "react-icons/fa";
 import { MdDeleteOutline } from "react-icons/md";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { FiUser } from "react-icons/fi";
+import { IoPeopleOutline, IoPeopleSharp  } from "react-icons/io5";
 
 export default function Posts() {
     const [posts, setPosts] = useState([]);
@@ -35,34 +36,27 @@ export default function Posts() {
         <div className="relative flex divide-x divide-gray-400 h-screen">
             {/* Left Menu */}
             {isVisible && (
-                <div className="relative flex flex-col w-[15%] h-full">
-                    <div className="flex px-4 py-8">
-                        <Image src={logo} alt="LOGO" />
-                        <h1 className="text-blue-700 font-bold text-xl tracking-wide"> Customer Information Portal</h1>
-                    </div>
-
+                <div className="relative flex flex-col bg-[#F0F2F5] w-[20%] h-full">
                     <div>
-                        <h1 className="text-md px-4 text-gray-500"> Main Menu </h1>
-                    </div>
-
-                    <div>
-                        <button className="gap-2 flex items-center px-6 py-2 w-full hover:bg-blue-200">
-                            <FiUser className="text-xl" />
-                            <h1 className="tracking-wider"> Customers </h1>
+                        <button className="gap-2 flex items-center px-10 py-2 mt-4 w-full hover:bg-[#E5E8EB] rounded-full">
+                            <IoPeopleSharp  className="text-xl" />
+                            <h1 className="tracking-wider font-semibold"> Customers </h1>
                         </button>
                     </div>
 
+                    
+
                     {/* Button to hide the menu */}
-                    <div className="absolute bottom-4 right-4">
+                    <div className="absolute w-[100%] bottom-10 left-2/3 transform -translate-x-1/2 -translate-y-1/2">
                         <button onClick={handleHideDiv}>
-                            <FaFastBackward className="text-xl hover:text-2xl" />
+                            <button className="bg-[#E5E8EB] font-semibold rounded-3xl px-12 p-2 text-center"> Hide sidebar </button>
                         </button>
                     </div>
                 </div>
             )}
 
             {/* Right Content */}
-            <div className={`w-[${isVisible ? '85%' : '100%'}] bg-[#f8f4f4] py-12 px-[5%]`}>
+            <div className={`w-[${isVisible ? '100%' : '100%'}] bg-[#f8f4f4] py-12 px-[5%]`}>
                 <div>
                     <h1 className="text-4xl font-normal"> Customers </h1>
                 </div>
